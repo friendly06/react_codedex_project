@@ -8,13 +8,13 @@ export default function Results({ element, artwork }) {
   return (
     <div>
       <p>
-        <strong>{name ? name : "Unknown Player"}</strong>, your element is: {element}
+        <strong>{name ? name : "Unknown Player"}</strong>, your element is: <strong>{element}</strong>
       </p>
       {artwork ? (
         <div className="artwork">
-          <h2>{artwork.title}</h2>
+          <h2>Breeds: {artwork.title}</h2>
           <img src={artwork.primaryImage} alt={artwork.title} />
-          <p>{artwork.artistDisplayName}</p>
+          <p className="picSource">Picture name: {artwork.artistDisplayName}</p>
           {/* <p>{artwork.objectDate}</p> */}
         </div>
       ) : (
