@@ -96,6 +96,13 @@ function App() {
     });
   };
 
+  const resetQuiz = () => {
+    setCurrentQuestionIndex(0);
+    setAnswers([]);
+    setElement(0);
+    setArtwork(null);
+  };
+
   useEffect(() => {
 
     const fetchArtwork = async (keyword) => {
@@ -144,7 +151,7 @@ function App() {
             currentQuestionIndex < questions.length ? (
               <Question question={questions[currentQuestionIndex].question} options={questions[currentQuestionIndex].options} onAnswer={handleAnswer} />
             ) : (
-              <Results element={element} artwork={artwork} />
+              <Results element={element} artwork={artwork} resetQuiz={resetQuiz}/>
             )
           }
         />
