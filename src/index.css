@@ -96,3 +96,7 @@ button:hover {
 .picSource{
   font-size: 7px;
 }
+
+.resetBtn{
+  margin: 20px auto;
+}
