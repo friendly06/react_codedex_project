@@ -92,3 +92,7 @@ button:hover {
   margin: 5px 0;
   text-align: center;
 }
+
+.picSource{
+  font-size: 7px;
+}
